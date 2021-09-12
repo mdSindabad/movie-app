@@ -1,10 +1,11 @@
 import React from 'react'
+import Navbar from './containers/navbar/Navbar'
 
 const App = () => {
     return (
-        <div>
-            <h1>Movie App!</h1>
-        </div>
+        <>
+            <Navbar />
+        </>
     )
 }
 
