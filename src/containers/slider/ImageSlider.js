@@ -16,7 +16,7 @@ const ImageSlider = () => {
       };
     
     return (
-        <div  className='box-border w-full h-full'>
+        <div  className='box-border w-full md:h-screen overflow-hidden' >
             <Slider {...settings}>
                 {images.map((url) => (
                     <img className='flex-grow object-cover w-full' src={`https://image.tmdb.org/t/p/w1280${url}`} alt="slider_image" />)
