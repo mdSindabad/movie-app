@@ -3,7 +3,7 @@ import React from 'react'
 const Card = ({movie}) => {
     const year = (movie.first_air_date || movie.release_date).split('-')[0];
     return (
-        <div className='text-gray-300 bg-black rounded overflow-hidden shadow-lg relative cursor-pointer hover:scale-105 transform transition duration-300' >
+        <div className='text-gray-300 bg-gray-700 bg-opacity-90 rounded overflow-hidden shadow-lg relative cursor-pointer hover:scale-105 transform transition duration-300' >
             <div className=''>
                 <img className='' src={`https://image.tmdb.org/t/p/w780${movie.poster_path}`} alt={movie.original_title || movie.original_name} />
             </div>

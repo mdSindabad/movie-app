@@ -13,10 +13,10 @@ const MobileMenu = () => {
         <div className='md:hidden'>
             {isOpen?
             <>
-                <FaTimes className='text-4xl rounded p-2 cursor-pointer hover:bg-green-600 text-gray-300 hover:shadow-lg' onClick={handleClick}/> 
+                <FaTimes className='text-4xl rounded p-2 cursor-pointer hover:bg-gray-800 text-gray-300 hover:shadow-lg' onClick={handleClick}/> 
                 <MobileMenuItems handleClick={handleClick} />
             </>:
-                <FaBars className='text-4xl rounded p-2 cursor-pointer hover:bg-green-600 text-gray-300 hover:shadow-lg' onClick={handleClick}/>
+                <FaBars className='text-4xl rounded p-2 cursor-pointer hover:bg-gray-800 text-gray-300 hover:shadow-lg' onClick={handleClick}/>
                 
             }
             

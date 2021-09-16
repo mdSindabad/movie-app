@@ -11,7 +11,7 @@ const Navbar = () => {
         <nav className='bg-gray-800 bg-opacity-40 py-3 px-2 md:px-12 flex items-center justify-between absolute w-full z-50'>
             {/* logo */}
             <div>
-                <a className='text-base text-gray-300 lg:text-2xl py-1 px-2 rounded cursor-pointer transition delay-150 duration-200 ease-in-out hover:bg-gray-800' href='#'>Movie App</a>
+                <a className='text-base text-gray-300 lg:text-2xl py-1 px-2 rounded cursor-pointer hover:text-green-500 transition duration-300' href='#'>Movie App</a>
             </div>
             {/* search input */}
             <div>
