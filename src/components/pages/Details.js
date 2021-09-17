@@ -77,7 +77,7 @@ const Details = (props) => {
                         <h2 className='font-bold text-2xl my-3 md:my-0'>{title || original_name}</h2>
                         <Ratings type={media_type} vote={vote_average} />
                         <p className='text-justify my-2 text-sm'>{overview}</p>
-                        <p className='my-2 text-sm mt-1'><span className='text-gray-400 mr-3'>Country:</span> {production_countries[production_countries.length - 1].name}</p>
+                        <p className='my-2 text-sm mt-1'><span className='text-gray-400 mr-3'>Country:</span> {production_countries[production_countries.length - 1]?.name || 'Not Available'}</p>
                         <p className='my-2 text-sm mt-1'><span className='text-gray-400 mr-3'>Genre:</span> {
                             getGenres().join(', ')
                         }</p>

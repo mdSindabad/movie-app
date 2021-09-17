@@ -47,8 +47,8 @@ const Search = ({history}) => {
                 <h1 className='text-gray-300 text-2xl mb-3 md:m-5'><span className='text-gray-500'>Search results for:</span> {searchParams.split('-').join(' ')}</h1>
                 <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4'>
                 {
-                    state.data.results.map(movie => {
-                        return movie.poster_path && <Card key={movie.id} movie={movie} />
+                    state.data.results.map(media => {
+                        return media.poster_path && <Card key={media.id} media={media} />
                     })
                 }
                 </div>
