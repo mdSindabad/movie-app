@@ -14,10 +14,10 @@ const Navbar = () => {
                 <a className='text-base text-gray-300 lg:text-2xl py-1 px-2 rounded cursor-pointer hover:text-green-500 transition duration-300' href='#'>Movie App</a>
             </div>
             {/* search input */}
-            <div>
-                <form className="relative" onSubmit={searchMovie} >
+            <div className=''>
+                <form className="relative w-4/5 md:w-96 ml-auto" onSubmit={searchMovie} >
                     <HiSearch className="absolute top-50 transform ml-1 translate-y-1/3 text-lg text-gray-300" />
-                    <input type='text' placeholder='Search...' className='px-6 py-1 rounded w-4/5 md:w-96 bg-transparent border border-gray-300 text-gray-300 focus:outline-none' />
+                    <input type='text' placeholder='Search...' className='px-6 py-1 rounded w-full bg-transparent border border-gray-300 text-gray-300 focus:outline-none' />
                 </form>
             </div>
             {/* menu */}
