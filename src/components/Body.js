@@ -4,11 +4,12 @@ import Movies from './pages/Movies'
 import TvSeries from './pages/TvSeries'
 import Details from './pages/Details'
 import { Switch, Route } from 'react-router-dom'
+import Search from './pages/Search'
 
 const Body = () => {
     return (
         <Switch>
-            <main className='pb-5 bg-gray-700'>
+            <main className=' bg-gray-700'>
                 <Route exact path='/'>
                     <Home />
                 </Route>
@@ -20,6 +21,9 @@ const Body = () => {
                 </Route>
                 <Route path='/details:id'>
                     <Details />
+                </Route>
+                <Route path='/search'>
+                    <Search />
                 </Route>
             </main>
         </Switch>
