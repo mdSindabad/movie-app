@@ -48,11 +48,11 @@ const Details = (props) => {
     return (
         data.isLoading ? (
             // display spinner
-            <div className='flex items-center justify-center h-screen'>
+            <div className='flex items-center justify-center'>
                 <ImSpinner9 className='text-3xl text-green-500 animate-spin' />
             </div>) : (
             // display data
-            <main className='bg-gray-700 md:grid md:grid-cols-2 md:h-screen pt-14 md:pt-0 md:pt-20 md:items-center'>
+            <div className='md:grid md:grid-cols-2 md:h-screen pt-14 md:pt-0 md:pt-20 md:items-center'>
             
             {/* details section */}
             <section className='md:grid md:grid-cols-3 px-3 md:px-5 my-3 md:my-0'>
@@ -60,7 +60,7 @@ const Details = (props) => {
                     <img className='rounded' src={`https://image.tmdb.org/t/p/w780${poster_path}`} alt={title || original_name} />
                 </div>
                 <div className='col-span-2 text-gray-300 md:ml-3'>
-                    <h2 className='font-bold text-2xl mb-3 '>{title || original_name}</h2>
+                    <h2 className='font-bold text-2xl my-3 md:my-0'>{title || original_name}</h2>
                     <Ratings type={media_type} vote={vote_average} />
                     <p className='text-justify my-2 text-sm'>{overview}</p>
                     <p className='my-2 text-sm mt-1'><span className='text-gray-400 mr-3'>Country:</span> {production_countries[production_countries.length - 1].name}</p>
@@ -74,7 +74,7 @@ const Details = (props) => {
             <section className='flex justify-center w-full '>
                 <iframe width="480" height="320" src={`https://www.youtube.com/embed/${videoId}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true}></iframe>
             </section>
-        </main> 
+        </div> 
     )
             
         
