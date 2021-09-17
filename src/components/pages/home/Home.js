@@ -4,7 +4,6 @@ import Card from '../../Card'
 import ImageSlider from '../../slider/ImageSlider'
 
 const Home = () => {
-    console.log(data.results)
     return (
         <main >
             <ImageSlider />

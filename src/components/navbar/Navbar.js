@@ -2,6 +2,7 @@ import React from 'react'
 import DesktopMenu from './DesktopMenu'
 import MobileMenu from './MobileMenu'
 import { HiSearch } from "react-icons/hi";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const searchMovie = (e) => {
@@ -11,7 +12,7 @@ const Navbar = () => {
         <nav className='bg-gray-800 bg-opacity-40 py-3 px-2 md:px-12 flex items-center justify-between absolute w-full z-50'>
             {/* logo */}
             <div>
-                <a className='text-base text-gray-300 lg:text-2xl py-1 px-2 rounded cursor-pointer hover:text-green-500 transition duration-300' href='#'>Movie App</a>
+                <Link className='text-base text-gray-300 lg:text-2xl py-1 px-2 rounded cursor-pointer hover:text-green-500 transition duration-300' to='/'>Movie App</Link>
             </div>
             {/* search input */}
             <div className=''>
