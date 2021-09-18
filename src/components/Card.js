@@ -2,7 +2,7 @@ import React from 'react'
 import { withRouter } from 'react-router';
 
 const Card = ({media, type, history}) => {
-    const year = (media.first_air_date || media.release_date).split('-')[0];
+    const year = (media.first_air_date || media.release_date)?.split('-')[0];
 
     const handleClick = () => {
         history.push(`/details:${media.id}/media_type?=${media.media_type || type}`)

@@ -14,7 +14,7 @@ const Navbar = ({history}) => {
         setSearchParams('')
     }
     return (
-        <nav className='bg-gray-800 bg-opacity-60 py-3 px-2 md:px-12 flex items-center justify-between fixed w-full z-50'>
+        <nav className='bg-gray-800 bg-opacity-80 py-3 px-2 md:px-12 flex items-center justify-between fixed w-full z-50'>
             {/* logo */}
             <div>
                 <Link className='text-base text-gray-300 lg:text-2xl text-xl py-1 px-2 rounded cursor-pointer hover:text-green-500 transition duration-300' to='/'>MediaHub</Link>
