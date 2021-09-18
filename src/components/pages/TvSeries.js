@@ -64,7 +64,7 @@ const TvSeries = ({history}) => {
         <div className='py-16'>
             <section className='p-5 -mt-2'>
                 <div className='flex justify-between'>
-                    <h1 className='text-gray-300 text-2xl mb-3 md:m-5'>Tv Series/ {selectItems.filter(item => item.value === category)[0].name}</h1>
+                    <h1 className='text-gray-300 text-xl md:text-2xl mb-3 md:m-5'>Tv Series/ {selectItems.filter(item => item.value === category)[0].name}</h1>
                     <Category category={category} changeCategory={changeCategory} selectItems={selectItems} />
                 </div>
                 <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4'>
