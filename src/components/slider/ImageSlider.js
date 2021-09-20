@@ -1,11 +1,26 @@
-import React from 'react'
-import Slider from "react-slick"
+import React from 'react';
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { withRouter } from 'react-router';
 import Ratings from '../Ratings';
 
 const ImageSlider = ({data, history}) => {
+
+    /* Randomize array in-place using Durstenfeld shuffle algorithm */
+    const shuffleData = (array) => {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            const temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+        return array
+    };
+
+    // filter data for slider
+    const sliderData = data?.filter(item => item.media_type === 'movie')
+    const shuffledData = shuffleData(sliderData.slice(0, 7))
     
     const settings = {
         infinite: true,
@@ -18,12 +33,12 @@ const ImageSlider = ({data, history}) => {
 
     const handleClick = (id, media) => {
         history.push(`/details:${id}/media_type?=${media}`)
-    }
+    };
     
     return (
         <div  className='w-full overflow-hidden z-10' >
             <Slider {...settings}>
-                {data.map((movie) => (
+                {shuffledData.map((movie) => (
                     <div key={movie.id} class='relative xl:h-screen'>
                         <img className='flex-grow object-cover w-full' src={`https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`} alt="slider_image" />
                         <div class='text-gray-200 absolute z-50 bottom-0 left-0 right-0 bg-gray-800 bg-opacity-30 px-5 py-2 md:px-15 md:py-10 overflow-hidden'>
@@ -40,6 +55,6 @@ const ImageSlider = ({data, history}) => {
             </Slider>
         </div>
     )
-}
+};
 
-export default withRouter(ImageSlider)
+export default withRouter(ImageSlider);

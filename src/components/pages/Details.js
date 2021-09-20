@@ -1,11 +1,12 @@
-import React, {useEffect, useState} from 'react'
-import { withRouter } from 'react-router'
+import React, {useEffect, useState} from 'react';
+import { withRouter } from 'react-router';
 import axios from 'axios';
-import Ratings from '../Ratings'
+import Ratings from '../Ratings';
 import Spinner from '../Spinner';
 import Error from '../Error';
 
 const Details = (props) => {
+    // initial state
     const initialState = {
         isLoading: true,
         media:{},
@@ -15,17 +16,17 @@ const Details = (props) => {
     const [data, setData] = useState(initialState);
 
     // extract data from url
-    const media_type = props.location.search.split('=')[1]
-    const id = props.match.url.split(':')[1]
+    const media_type = props.location.search.split('=')[1];
+    const id = props.match.url.split(':')[1];
 
     // youtube video id
-    const [videoId, setVideoid] = useState('')
+    const [videoId, setVideoid] = useState('');
 
     // destructuring movie data
     const {poster_path, title, original_name, vote_average, overview, production_countries, first_air_date, release_date, genres} = data.media;
 
     // get genres
-    const getGenres = () => genres.map(item => item.name)
+    const getGenres = () => genres.map(item => item.name);
 
     useEffect(() => {
         // fetch video youtube id
@@ -37,7 +38,6 @@ const Details = (props) => {
                 return name.includes('Trailer') && item.site === 'YouTube';
             })[0];
             setVideoid(obj.key)
-            // console.log(obj)
         })
         .catch(err => console.log(err));
 
@@ -57,7 +57,7 @@ const Details = (props) => {
                 error: err.message
                 })
             })
-    },[id])
+    },[id]);
  
     return (
         data.isLoading ? 
@@ -92,6 +92,6 @@ const Details = (props) => {
         
     )
     
-}
+};
 
-export default withRouter(Details)
+export default withRouter(Details);

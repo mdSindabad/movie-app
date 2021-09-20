@@ -1,15 +1,17 @@
-import React, { Fragment } from 'react'
-import Navbar from './components/navbar/Navbar'
-import Footer from './components/Footer'
-import Body from './components/Body'
+import React from 'react';
+import Navbar from './components/navbar/Navbar';
+import Footer from './components/Footer';
+import Body from './components/Body';
+import {Provider} from 'react-redux';
+import store from './components/redux/store';
 
 const App = () => {
     return (
-        <Fragment>
+        <Provider store={store}>
             <Navbar />
             <Body />
             <Footer />
-        </Fragment>
+        </Provider>
     )
 }
 
