@@ -41,9 +41,9 @@ const Movie = () => {
             error ?
                 // display error message
                 <Error /> :
-                <div className='py-16'>
+                <div className='pb-16 md:pt-16'>
                     <section className='p-5 -mt-2'>
-                        <div className='flex justify-between'>
+                        <div className='flex justify-between items-center'>
                             <h1 className='text-gray-300 text-xl md:text-2xl mb-3 md:m-5'>Movies/ {selectItems.filter(item => item.value === categoryValue)[0].name}</h1>
                             <Category category={categoryValue} changeCategory={changeCategory} selectItems={selectItems} />
                         </div>

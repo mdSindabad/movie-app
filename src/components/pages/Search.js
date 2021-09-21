@@ -1,7 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 import { useSelector } from 'react-redux';
-import axios from 'axios';
 import Card from '../Card';
 import Spinner from '../Spinner';
 import Error from '../Error';
@@ -21,9 +20,9 @@ const Search = ({ history }) => {
             error ?
                 // display error message
                 <Error /> :
-                <div className='py-16'>
+                <div className='pb-16 md:pt-16'>
                     <section className='p-5 -mt-2'>
-                        <h1 className='text-gray-300 text-2xl mb-3 md:m-5'><span className='text-gray-500'>Search results for:</span> {searchParams.split('-').join(' ')}</h1>
+                        <h1 className='text-gray-300 text-xl md:text-2xl mb-3 md:m-5'><span className='text-gray-500'>Results for:</span> {searchParams.split('-').join(' ')}</h1>
                         <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4'>
                             {
                                 data.map(media => {
