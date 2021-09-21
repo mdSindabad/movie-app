@@ -1,11 +1,11 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import { homeReducer, searchReducer } from './reducers';
-import { movieReducer } from './reducers/movieReducer';
+import { homeReducer, movieReducer, tvReducer, searchReducer } from './reducers';
 
 const rootReducer = combineReducers({
     home: homeReducer,
     movie: movieReducer,
+    tv: tvReducer,
     search: searchReducer
 })
 

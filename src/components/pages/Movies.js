@@ -32,7 +32,6 @@ const Movie = () => {
         if (!data.length || category !== categoryValue) {
             dispatch(fetch_movie(categoryValue))
         }
-
     }, [categoryValue]);
 
     return (
