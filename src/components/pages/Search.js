@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { withRouter } from 'react-router';
+import { useSelector } from 'react-redux';
 import axios from 'axios';
 import Card from '../Card';
 import Spinner from '../Spinner';
 import Error from '../Error';
-import { useSelector } from 'react-redux';
 
 
 const Search = ({ history }) => {
