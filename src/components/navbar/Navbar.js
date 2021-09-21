@@ -27,7 +27,7 @@ const Navbar = ({ history }) => {
             </div>
             {/* search input */}
             <div className=''>
-                <form className="relative w-4/5 lg:w-96 ml-auto" onSubmit={searchMovie} >
+                <form className="relative w-4/5 md:w-96 ml-auto" onSubmit={searchMovie} >
                     <HiSearch className="absolute top-50 transform ml-1 translate-y-1/3 text-lg text-gray-300" />
                     <input value={searchParams} onChange={(e) => setSearchParams(e.target.value)} type='text' placeholder='Search...' className='px-6 py-1 rounded w-full bg-transparent border border-gray-300 text-gray-300 focus:outline-none' />
                 </form>

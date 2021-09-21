@@ -71,7 +71,7 @@ const Details = (props) => {
                 // display error message
                 <Error /> :
                 // display data
-                <div className='md:grid md:grid-cols-2 md:h-screen py-16 md:pt-0 md:items-center'>
+                <div className='lg:grid lg:grid-cols-2 md:h-screen pb-16 pt-2 md:pt-28 md:pt-0'>
                     {/* details section */}
                     <section className='md:grid md:grid-cols-3 px-3 md:px-5 my-3 md:my-0'>
                         <div className='col-span-1 rounded overflow-hidden  md:block w-11/12 mx-auto'>
@@ -89,7 +89,7 @@ const Details = (props) => {
                         </div>
                     </section>
                     {/* trailer section */}
-                    <section className='flex justify-center w-full '>
+                    <section className='flex justify-center w-full md:mt-8 lg:mt-0'>
                         <iframe width="480" height="320" src={`https://www.youtube.com/embed/${videoId}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true}></iframe>
                     </section>
                 </div>
