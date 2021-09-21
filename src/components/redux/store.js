@@ -1,9 +1,10 @@
-import {createStore, combineReducers,applyMiddleware} from 'redux';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import {homeReducer} from './reducers';
+import { homeReducer, searchReducer } from './reducers';
 
 const rootReducer = combineReducers({
-    home: homeReducer
+    home: homeReducer,
+    search: searchReducer
 })
 
 const store = createStore(rootReducer, applyMiddleware(thunk));

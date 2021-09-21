@@ -3,13 +3,19 @@ import DesktopMenu from './DesktopMenu'
 import MobileMenu from './MobileMenu'
 import { HiSearch } from "react-icons/hi";
 import { Link, withRouter } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { fetch_search } from '../redux/action_creators';
 
-const Navbar = ({history}) => {
+
+const Navbar = ({ history }) => {
+    // redux dispatch
+    const dispatch = useDispatch();
     // local state
     const [searchParams, setSearchParams] = useState('');
 
     const searchMovie = (e) => {
         e.preventDefault()
+        dispatch(fetch_search(searchParams));
         history.push(`/search/?q=${searchParams}`)
         setSearchParams('')
     }

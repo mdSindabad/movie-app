@@ -1,1 +1,2 @@
-export {homeReducer} from './homeReducer';
+export { homeReducer } from './homeReducer';
+export { searchReducer } from './searchReducer';
