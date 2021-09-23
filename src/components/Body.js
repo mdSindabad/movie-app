@@ -1,10 +1,10 @@
-import React from 'react'
-import Home from './pages/Home'
-import Movies from './pages/Movies'
-import TvSeries from './pages/TvSeries'
-import Details from './pages/Details'
-import { Switch, Route } from 'react-router-dom'
-import Search from './pages/Search'
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Movies from './pages/Movies';
+import TvSeries from './pages/TvSeries';
+import Details from './pages/Details';
+import Search from './pages/Search';
 
 const Body = () => {
     return (
@@ -30,4 +30,4 @@ const Body = () => {
     )
 }
 
-export default Body
+export default Body;

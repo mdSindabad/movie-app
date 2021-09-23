@@ -35,4 +35,4 @@ export const fetch_search = (queryString) => {
                 dispatch(fetch_search_failure(err.message))
             })
     }
-}
+};

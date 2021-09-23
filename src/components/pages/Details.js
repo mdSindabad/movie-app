@@ -15,6 +15,7 @@ const Details = (props) => {
     // local state
     const [data, setData] = useState(initialState);
 
+    console.log(data.media)
     // extract data from url
     const media_type = props.location.search.split('=')[1];
     const id = props.match.url.split(':')[1];
@@ -23,7 +24,7 @@ const Details = (props) => {
     const [videoId, setVideoid] = useState('');
 
     // destructuring movie data
-    const { poster_path, title, original_name, vote_average, overview, production_countries, first_air_date, release_date, genres } = data.media;
+    const { poster_path, title, original_name, vote_average, overview, production_countries, first_air_date, release_date, genres, number_of_episodes, number_of_seasons } = data.media;
 
     // get genres
     const getGenres = () => genres.map(item => item.name);
@@ -86,6 +87,14 @@ const Details = (props) => {
                                 getGenres().join(', ')
                             }</p>
                             <p className='my-2 text-sm mt-1'><span className='text-gray-400 mr-3'>{media_type === 'movie' ? 'Release:' : 'First Air:'}</span> {first_air_date || release_date}</p>
+                            {
+                                media_type !== 'movie' && (
+                                    <>
+                                        <p className='my-2 text-sm mt-1'><span className='text-gray-400 mr-3'>Seasons: </span> {number_of_seasons}</p>
+                                        <p className='my-2 text-sm mt-1'><span className='text-gray-400 mr-3'>Episodes: </span> {number_of_episodes}</p>
+                                    </>
+                                )
+                            }
                         </div>
                     </section>
                     {/* trailer section */}
@@ -96,6 +105,6 @@ const Details = (props) => {
 
     )
 
-};
+}
 
 export default withRouter(Details);

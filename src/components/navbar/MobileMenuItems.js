@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link, withRouter } from 'react-router-dom'
+import React from 'react';
+import { Link, withRouter } from 'react-router-dom';
 
 const MobileMenuItems = ({ handleClick, history }) => {
     // check the page
@@ -24,4 +24,4 @@ const MobileMenuItems = ({ handleClick, history }) => {
     )
 }
 
-export default withRouter(MobileMenuItems)
+export default withRouter(MobileMenuItems);

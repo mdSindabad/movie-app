@@ -1,15 +1,15 @@
-import React from 'react'
+import React from 'react';
 import { withRouter } from 'react-router';
 
-const Card = ({media, type, history}) => {
+const Card = ({ media, type, history }) => {
     const year = (media.first_air_date || media.release_date)?.split('-')[0];
 
     const handleClick = () => {
         history.push(`/details:${media.id}/media_type?=${media.media_type || type}`)
-    }
+    };
 
     return (
-        <div className='text-gray-300 bg-gray-800 bg-opacity-90 rounded overflow-hidden shadow-lg relative cursor-pointer hover:scale-105 transform transition duration-300' onClick={handleClick} >
+        <div className='text-gray-300 bg-gray-800 bg-opacity-90 rounded overflow-hidden shadow-lg relative cursor-pointer lg:hover:scale-105 transform transition duration-300' onClick={handleClick} >
             <div className=''>
                 <img className='' src={`https://image.tmdb.org/t/p/w780${media.poster_path}`} alt={media.original_title || media.original_name} />
             </div>
@@ -25,4 +25,4 @@ const Card = ({media, type, history}) => {
     )
 }
 
-export default withRouter(Card)
+export default withRouter(Card);

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Category = ({ category, changeCategory, selectItems }) => {
     return (
@@ -12,4 +12,4 @@ const Category = ({ category, changeCategory, selectItems }) => {
     )
 }
 
-export default Category
+export default Category;

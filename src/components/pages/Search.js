@@ -33,6 +33,6 @@ const Search = ({ history }) => {
                     </section>
                 </div>
     )
-};
+}
 
 export default withRouter(Search);

@@ -27,12 +27,12 @@ export const fetch_home = () => {
     return dispatch => {
         dispatch(fetch_home_request());
         axios.get(`https://api.themoviedb.org/3/trending/all/week?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`)
-        .then(response => {
-            const data = response.data.results;
-            dispatch(fetch_home_success(data))
-        })
-        .catch(err => {
-            dispatch(fetch_home_failure(err.message))
-        })
+            .then(response => {
+                const data = response.data.results;
+                dispatch(fetch_home_success(data))
+            })
+            .catch(err => {
+                dispatch(fetch_home_failure(err.message))
+            })
     }
-}
+};

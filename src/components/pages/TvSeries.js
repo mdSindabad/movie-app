@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import Card from '../Card';
 import Spinner from '../Spinner';
 import Error from '../Error';
 import Category from '../Category';
-import { useDispatch, useSelector } from 'react-redux';
 import { fetch_tv } from '../redux/action_creators';
 
 const TvSeries = () => {
@@ -59,6 +59,6 @@ const TvSeries = () => {
                     </section>
                 </div>
     )
-};
+}
 
 export default TvSeries;

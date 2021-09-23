@@ -36,4 +36,4 @@ export const fetch_movie = (category) => {
                 dispatch(fetch_movie_failure(err.message))
             })
     }
-}
+};

@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link, withRouter } from 'react-router-dom'
+import React from 'react';
+import { Link, withRouter } from 'react-router-dom';
 
 const DesktopMenu = ({ history }) => {
     // check the page
@@ -23,4 +23,4 @@ const DesktopMenu = ({ history }) => {
     )
 }
 
-export default withRouter(DesktopMenu)
+export default withRouter(DesktopMenu);

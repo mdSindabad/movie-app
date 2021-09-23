@@ -1,8 +1,8 @@
 import React from 'react';
+import { withRouter } from 'react-router';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { withRouter } from 'react-router';
 import Ratings from '../Ratings';
 
 const ImageSlider = ({ data, history }) => {
@@ -19,8 +19,8 @@ const ImageSlider = ({ data, history }) => {
     };
 
     // filter data for slider
-    const sliderData = data?.filter(item => item.media_type === 'movie')
-    const shuffledData = shuffleData(sliderData.slice(0, 7))
+    const sliderData = data?.filter(item => item.media_type === 'movie');
+    const shuffledData = shuffleData(sliderData.slice(0, 7));
 
     const settings = {
         infinite: true,
@@ -55,6 +55,6 @@ const ImageSlider = ({ data, history }) => {
             </Slider>
         </div>
     )
-};
+}
 
 export default withRouter(ImageSlider);

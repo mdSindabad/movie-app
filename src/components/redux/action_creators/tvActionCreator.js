@@ -36,4 +36,4 @@ export const fetch_tv = (category) => {
                 dispatch(fetch_tv_failure(err.message))
             })
     }
-}
+};

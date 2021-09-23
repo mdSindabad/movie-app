@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import DesktopMenu from './DesktopMenu'
-import MobileMenu from './MobileMenu'
-import { HiSearch } from "react-icons/hi";
+import React, { useState } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import DesktopMenu from './DesktopMenu';
+import MobileMenu from './MobileMenu';
+import { HiSearch } from "react-icons/hi";
 import { fetch_search } from '../redux/action_creators';
 
 
@@ -41,4 +41,4 @@ const Navbar = ({ history }) => {
     )
 }
 
-export default withRouter(Navbar)
+export default withRouter(Navbar);

@@ -1,8 +1,8 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/Footer';
 import Body from './components/Body';
-import {Provider} from 'react-redux';
 import store from './components/redux/store';
 
 const App = () => {
@@ -15,4 +15,4 @@ const App = () => {
     )
 }
 
-export default App
+export default App;

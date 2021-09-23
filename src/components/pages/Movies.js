@@ -57,6 +57,6 @@ const Movie = () => {
                     </section>
                 </div>
     )
-};
+}
 
 export default Movie;
