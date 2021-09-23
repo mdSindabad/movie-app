@@ -15,7 +15,6 @@ const Details = (props) => {
     // local state
     const [data, setData] = useState(initialState);
 
-    console.log(data.media)
     // extract data from url
     const media_type = props.location.search.split('=')[1];
     const id = props.match.url.split(':')[1];
@@ -33,7 +32,6 @@ const Details = (props) => {
         // fetch video youtube id
         axios.get(`https://api.themoviedb.org/3/${media_type}/${id}/videos?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`)
             .then(response => {
-                // console.log(response)
                 const obj = response.data.results.filter(item => {
                     const name = item.name;
                     return name.includes('Trailer') && item.site === 'YouTube';

@@ -34,8 +34,6 @@ const TvSeries = () => {
         }
     }, [categoryValue]);
 
-    // console.log(state)
-
     return (
         isLoading ?
             // display spinner
