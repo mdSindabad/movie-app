@@ -28,6 +28,9 @@ const TvSeries = () => {
     };
 
     useEffect(() => {
+        // set title
+        document.title = 'MediaHub | Tv Series';
+
         // fetch data first time or on category change
         if (!data.length || category !== categoryValue) {
             dispatch(fetch_tv(categoryValue))

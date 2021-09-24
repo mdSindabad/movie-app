@@ -28,6 +28,9 @@ const Movie = () => {
     };
 
     useEffect(() => {
+        // set title
+        document.title = 'MediaHub | Movies';
+
         // fetch data first time or on category change
         if (!data.length || category !== categoryValue) {
             dispatch(fetch_movie(categoryValue))

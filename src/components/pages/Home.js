@@ -13,6 +13,9 @@ const Home = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
+        // set title
+        document.title = 'MediaHub | Home';
+
         // fetch data if store is empty
         if (isLoading) {
             dispatch(fetch_home())

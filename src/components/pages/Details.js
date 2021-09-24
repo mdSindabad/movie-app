@@ -62,6 +62,13 @@ const Details = (props) => {
             })
     }, [id]);
 
+    useEffect(() => {
+        // set title
+        if (title || original_name) {
+            document.title = `MediaHub | ${title || original_name}`;
+        }
+    }, [data])
+
     return (
         data.isLoading ?
             // display spinner

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { withRouter } from 'react-router';
 import { useSelector } from 'react-redux';
 import Card from '../Card';
@@ -14,6 +14,13 @@ const Search = ({ history }) => {
     // extract data from url
     const searchParams = history.location.search.split('=')[1].split(' ').join('-');
 
+    const searchTitle = searchParams.split('-').join(' ');
+
+    useEffect(() => {
+        // set title
+        document.title = `MediaHub | Search: ${searchTitle}`;
+    }, [searchTitle])
+
     return (
         isLoading ?
             // display spinner
@@ -25,7 +32,7 @@ const Search = ({ history }) => {
                     <div className='h-screen flex justify-center items-center' >
                         <h1 className='px-4 py-2 bg-red-200 text-red-400 inline rounded text-xl flex items-center'>
                             <BiError className='mr-1 text-red-500' />
-                            No results found for : <b className='font-bold text-red-500'>{searchParams.split('-').join(' ')}</b></h1>
+                            No results found for : <b className='font-bold text-red-500'>{searchTitle}</b></h1>
                     </div> :
                     <div className='pb-16 md:pt-16'>
                         <section className='p-5 -mt-2'>
