@@ -23,7 +23,8 @@ const Navbar = ({ history }) => {
         <nav className='bg-gray-800 py-3 px-2 md:px-12 flex items-center justify-between w-full z-50 md:fixed md:bg-opacity-80'>
             {/* logo */}
             <div>
-                <Link className='text-base text-gray-300 lg:text-2xl text-xl py-1 px-2 rounded cursor-pointer hover:text-green-500 transition duration-300' to='/'>MediaHub</Link>
+                <Link className='text-base text-gray-300 py-1 px-2 rounded cursor-pointer hover:text-green-500 transition duration-300' to='/'><span className='font-bold lg:text-3xl text-2xl text-green-500'>M</span>ediaHub</Link>
+                {/* <Link className='text-base text-gray-300 py-1 px-2 rounded cursor-pointer hover:text-green-500 transition duration-300' to='/'>Media<span className='bg-green-500 text-gray-800 px-1 rounded'>Hub</span></Link> */}
             </div>
             {/* search input */}
             <div className=''>
