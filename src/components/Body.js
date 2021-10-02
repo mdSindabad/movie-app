@@ -5,11 +5,12 @@ import Movies from './pages/Movies';
 import TvSeries from './pages/TvSeries';
 import Details from './pages/Details';
 import Search from './pages/Search';
+import NotFound from './pages/NotFound';
 
 const Body = () => {
     return (
         <Switch>
-            <main className=' bg-gray-700'>
+            <main className='bg-gray-700'>
                 <Route exact path='/'>
                     <Home />
                 </Route>
@@ -24,6 +25,9 @@ const Body = () => {
                 </Route>
                 <Route path='/search'>
                     <Search />
+                </Route>
+                <Route path='*'>
+                    <NotFound />
                 </Route>
             </main>
         </Switch>
