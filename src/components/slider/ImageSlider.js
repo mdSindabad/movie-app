@@ -1,11 +1,13 @@
 import React from 'react';
-import { withRouter } from 'react-router';
+import { useHistory } from 'react-router';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Ratings from '../Ratings';
 
-const ImageSlider = ({ data, history }) => {
+const ImageSlider = ({ data }) => {
+    // react-router hook
+    const history = useHistory();
 
     /* Randomize array in-place using Durstenfeld shuffle algorithm */
     const shuffleData = (array) => {
@@ -57,4 +59,4 @@ const ImageSlider = ({ data, history }) => {
     )
 }
 
-export default withRouter(ImageSlider);
+export default ImageSlider;

@@ -9,8 +9,8 @@ import NotFound from './pages/NotFound';
 
 const Body = () => {
     return (
-        <Switch>
-            <main className='bg-gray-700'>
+        <main className='bg-gray-700'>
+            <Switch>
                 <Route exact path='/'>
                     <Home />
                 </Route>
@@ -29,8 +29,8 @@ const Body = () => {
                 <Route path='*'>
                     <NotFound />
                 </Route>
-            </main>
-        </Switch>
+            </Switch>
+        </main>
     )
 }
 

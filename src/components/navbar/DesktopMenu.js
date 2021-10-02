@@ -1,9 +1,12 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
-const DesktopMenu = ({ history }) => {
+const DesktopMenu = () => {
+    // react-router hook
+    const location = useLocation();
+
     // check the page
-    const path = history.location.pathname;
+    const path = location.pathname;
     const homePage = path === '/' ? true : false;
     const moviePage = path === '/movies' ? true : false;
     const tvPage = path === '/tv-series' ? true : false;
@@ -23,4 +26,4 @@ const DesktopMenu = ({ history }) => {
     )
 }
 
-export default withRouter(DesktopMenu);
+export default DesktopMenu;

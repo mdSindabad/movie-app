@@ -1,9 +1,12 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const MobileMenuItems = ({ handleClick, history }) => {
+    // react-router hook
+    const location = useLocation();
+
     // check the page
-    const path = history.location.pathname;
+    const path = location.pathname;
     const homePage = path === '/' ? true : false;
     const moviePage = path === '/movies' ? true : false;
     const tvPage = path === '/tv-series' ? true : false;
@@ -24,4 +27,4 @@ const MobileMenuItems = ({ handleClick, history }) => {
     )
 }
 
-export default withRouter(MobileMenuItems);
+export default MobileMenuItems;

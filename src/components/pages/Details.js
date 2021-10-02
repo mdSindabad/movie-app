@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { withRouter } from 'react-router';
+import { useLocation } from 'react-router';
 import axios from 'axios';
 import Ratings from '../Ratings';
 import Spinner from '../Spinner';
 import Error from '../Error';
 
 const Details = (props) => {
+    // react-router hook
+    const location = useLocation();
+
     // initial state
     const initialState = {
         isLoading: true,
@@ -16,8 +19,8 @@ const Details = (props) => {
     const [data, setData] = useState(initialState);
 
     // extract data from url
-    const media_type = props.location.search.split('=')[1];
-    const id = props.match.url.split(':')[1];
+    const media_type = location.search.split('=')[1];
+    const id = location.pathname.split(':')[1].split('/')[0];
 
     // youtube video id
     const [videoId, setVideoid] = useState('');
@@ -112,4 +115,4 @@ const Details = (props) => {
 
 }
 
-export default withRouter(Details);
+export default Details;

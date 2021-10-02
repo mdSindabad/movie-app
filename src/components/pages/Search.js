@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { withRouter } from 'react-router';
+import { useLocation } from 'react-router';
 import { useSelector } from 'react-redux';
 import Card from '../Card';
 import Spinner from '../Spinner';
@@ -8,12 +8,14 @@ import { BiError } from 'react-icons/bi';
 
 
 const Search = ({ history }) => {
+    // react-router hook
+    const location = useLocation();
+
     // redux store
     const { isLoading, data, error } = useSelector(state => state.search);
 
     // extract data from url
-    const searchParams = history.location.search.split('=')[1].split(' ').join('-');
-
+    const searchParams = location.search.split('=')[1].split(' ').join('-');
     const searchTitle = searchParams.split('-').join(' ');
 
     useEffect(() => {
@@ -49,4 +51,4 @@ const Search = ({ history }) => {
     )
 }
 
-export default withRouter(Search);
+export default Search;

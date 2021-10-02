@@ -1,7 +1,10 @@
 import React from 'react';
-import { withRouter } from 'react-router';
+import { useHistory } from 'react-router';
 
-const Card = ({ media, type, history }) => {
+const Card = ({ media, type }) => {
+    // react-router hook
+    const history = useHistory();
+
     const year = (media.first_air_date || media.release_date)?.split('-')[0];
 
     const handleClick = () => {
@@ -25,4 +28,4 @@ const Card = ({ media, type, history }) => {
     )
 }
 
-export default withRouter(Card);
+export default Card;

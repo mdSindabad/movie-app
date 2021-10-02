@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import DesktopMenu from './DesktopMenu';
 import MobileMenu from './MobileMenu';
@@ -7,7 +7,10 @@ import { HiSearch } from "react-icons/hi";
 import { fetch_search } from '../redux/action_creators';
 
 
-const Navbar = ({ history }) => {
+const Navbar = () => {
+    // react-router hook
+    const history = useHistory();
+
     // redux dispatch
     const dispatch = useDispatch();
     // local state
@@ -42,4 +45,4 @@ const Navbar = ({ history }) => {
     )
 }
 
-export default withRouter(Navbar);
+export default Navbar;
