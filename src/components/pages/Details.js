@@ -30,7 +30,6 @@ const Details = (props) => {
     // destructuring movie data
     const { poster_path, title, original_name, vote_average, overview, production_countries, first_air_date, release_date, genres, number_of_episodes, number_of_seasons } = data.media;
 
-
     // get genres
     const getGenres = () => genres.map(item => item.name);
 
@@ -121,13 +120,12 @@ const Details = (props) => {
                                         <>
                                             <select className='mr-2 bg-blue-600 text-white rounded px-2 py-1' onChange={(e) => setSeason(e.target.value)} value={season}>
                                                 {
-                                                    data.media.seasons.map((season, index) => {
-                                                        if (data.media.seasons.length > index + 1) {
-                                                            return (
+                                                    data.media.seasons.length === 1 ?
+                                                        <option value={1}>Season-1</option> :
+                                                        data.media.seasons.map((season, index) => (
+                                                            index + 1 === data.media.seasons.length ? null :
                                                                 <option value={index + 1}>Season-{index + 1}</option>
-                                                            )
-                                                        }
-                                                    })
+                                                        ))
                                                 }
                                             </select>
                                             <select className='bg-blue-600 text-white rounded px-2 py-1' onChange={(e) => setEpisode(e.target.value)} value={episode}>
